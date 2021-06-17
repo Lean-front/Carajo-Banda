@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../img/fondo.jpg");
+}
+.centro{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+ul{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(rgb(22, 22, 22),black);
+    height: 60px;   
+}
+li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+}
+ul li a:hover{
+    background-color: black;
+    color: red;
+}
+.cdmenu{
+    height: 40px;
+}
+/*grid aplicado en galería*/
+#galería{
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-areas: "area1 area1 area2 area3"
+                         "area1 area1 area4 area4"
+                         "area5 area6 area4 area4"
+                         "area7 area7 area8 area8";
+}
+#img1{
+    grid-area: area1;
+}
+#img1:hover{
+    transform: scale(2,2);
+}
+#img2{
+    grid-area: area2;
+}
+#img2:hover{
+    transform: scale(2,2);
+}
+#img3{
+    grid-area: area3;
+}
+#img3:hover{
+    transform: scale(2,2);
+}
+#img4{
+    grid-area: area4;
+}
+#img4:hover{
+    transform: scale(2,2);
+}
+#img5{
+    grid-area: area5;
+}
+#img5:hover{
+    transform: scale(2,2);
+}
+#img6{
+    grid-area: area6;
+}
+#img6:hover{
+    transform: scale(2,2);
+}
+#img7{
+    grid-area: area7;
+}
+#img7:hover{
+    transform: scale(2,2);
+}
+#img8{
+    grid-area: area8;
+}
+#img8:hover{
+    transform: scale(2,2);
+}
+/*Atributos generales*/
+main{
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: black;
+}
+.sección{
+    color: white;
+    font-size: 30px;
+    font-family: "Lato";
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+    padding: 50px;
+}
+.centro1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Animación en discografía*/
+.album{
+    margin: 50px 50px 50px 50px;
+    transform: rota;
+    animation-name: rotacion;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes rotacion{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+h2{
+    color: white;
+    font-size: 40px;
+}
+section{
+    display: flex;
+    margin: 30px 100px 30px 100px;
+    border: black 5pt;
+}
+.perfil{
+    padding: 30px;
+}
+p{
+    color: white;
+    font-size: 20px;
+    line-height: 0,7;
+}
+form{
+    color: white;
+    margin-top: 100px;
+    margin-left: 40%
+}
+footer{
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: black;
+    display: flex;
+    color: white;
+}
+
