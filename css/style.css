@@ -10,6 +10,9 @@ body{
     display: block;
     margin: auto;
 }
+.oculto{
+    display: none;
+}
 ul{ 
     display: flex;
     flex-wrap: wrap;
@@ -33,8 +36,7 @@ ul li a:hover{
 }
 /*grid aplicado en galería*/
 #galería{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 50px 100px 50px 100px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 200px 200px 200px 200px;
@@ -146,10 +148,21 @@ p{
     font-size: 20px;
     line-height: 0,7;
 }
+#form-centro{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/fondo.jpg);
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
 form{
-    color: black;
-    margin-top: 100px;
-    margin-left: 40%
+    margin: 20px 0px 20px 0px;
+    color: white;
 }
 footer{
     padding: 30px 20px 30px 20px;
@@ -163,4 +176,34 @@ footer{
 .redes{
     display: flex;
 }
-
+@media only screen and (max-width:600px){
+    .centro{
+        display: none;
+    }
+    .oculto{
+        width: 70%;
+        padding: 20px;
+        display: block;
+        margin: auto;
+    }
+    ul{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient(rgb(22, 22, 22),black);
+        height: 100%; 
+        margin: 0px 40px 0px 40px;
+        border-radius: 20px;
+    }
+    li a{
+        font-size: 20px;
+        padding: 5%;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    #galería{
+        display: none;
+    }
+}
