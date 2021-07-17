@@ -2,6 +2,7 @@
 $fondo1: url(../img/fondo.jpg);
 $fondo2: url(../img/fondo2.png);
 $color1: red;
+$color2: white;
 $sanserif: "lato", sans-serif;
 /*MIXINS*/
 @mixin box(){
@@ -19,9 +20,6 @@ $sanserif: "lato", sans-serif;
 body{
     background-image: $fondo1;
 }
-.nav-link{
-    color: $danger;
-}
 ul{
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +31,7 @@ ul{
     li a{
         font-size: 20px;
         text-decoration: none;
-        color: white;
+        color: $color2;
         display: inline-block;
         font-family: $sanserif;
     }
@@ -86,26 +84,37 @@ main{
         font-size: 15px;
         padding: 0;
     }
-    .centro1{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     .contenedor{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         padding-bottom: 30px;
         article{
             @include box;
+            padding: 20px;
             h3{
                 font-size: 30px;
-                color: white;
+                color: $color2;
+                padding: 10px;
+            }
+            .ropa{
+                border-radius: 20px;
+            }
+            .tienda{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                .precio{
+                    color:$color2;
+                    font-size: 25px;
+                }
             }
             button{
                 font-family: $sanserif;
                 font-size: 15px;
                 background-color: black;   
-                color: white;
+                color: $color2;
                 height: 50px;
                 width: 100px;
                 border: 2px solid red;
@@ -118,8 +127,41 @@ main{
             }
         }
     }
+    #formularioinfo{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        .forminfo{
+            @include box;
+            color: $color2;    
+            max-width: 400px;
+        }
+        #form-centro{
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../img/fondo.jpg);
+            border: red 2px solid;
+            margin-bottom: 50px;
+            border-radius: 20px;
+            form{
+                margin: 20px 0px 20px 0px;
+                color: $color2;;
+            }
+        }
+    }
 }
+.centro1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 .album{
+    width: 80%;
     margin: 50px 50px 50px 50px;
     animation-name: rotacion;
     animation-duration: 4s;
@@ -133,11 +175,16 @@ main{
         transform: rotate(360deg);
     }
 }
-#galería{
+/*Galería GRID*/
+.contenedorgrid{
     margin: 0px 100px 50px 100px;
+
+}
+#galería{
+    width: 100%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-rows: 25% 25% 25% 25%;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
     grid-template-areas: "area1 area1 area2 area3"
@@ -145,52 +192,45 @@ main{
                          "area5 area6 area4 area4"
                          "area7 area7 area8 area8";
 }
+/*Galería responsive*/
 #img1{
+    width: 100%;
     grid-area: area1;
 }
 #img2{
+    width: 100%;
     grid-area: area2;
 }
 #img3{
+    width: 100%;
     grid-area: area3;
 }
 #img4{
+    width: 100%;
     grid-area: area4;
 }
 #img5{
+    width: 100%;
     grid-area: area5;
 }
 #img6{
+    width: 100%;
     grid-area: area6;
 }
 #img7{
+    width: 100%;
     grid-area: area7;
 }
 #img8{
-    grid-area: area8;
-}
-#form-centro{
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../img/fondo.jpg);
-    margin-bottom: 50px;
-    border-radius: 20px;
-    form{
-        margin: 20px 0px 20px 0px;
-        color: white;
-    }
+    grid-area: area8;
 }
 footer{
     padding: 30px 20px 30px 20px;
     background-image: $fondo1;
     .contenedorfooter{
         display: flex;
-        color: white;
+        color: $color2;
         justify-content: space-evenly;
         .redes{
             display: flex;
@@ -198,7 +238,7 @@ footer{
             a{
                 text-decoration: none;
                 h4{
-                    color: white;
+                    color: $color2;
                 }
                 h4:hover{
                     color: $color1;
@@ -209,6 +249,13 @@ footer{
             width: 50px;
             padding-right: 15px;
         }
+    }
+    h6{
+        font-family: $sanserif;
+        opacity: 25%;
+        margin-top: 20px;
+        color: $color2;
+        text-align: center;
     }
 }
 @media only screen and (max-width:600px){
@@ -231,12 +278,14 @@ footer{
         li a{
             font-size: 20px;
             text-decoration: none;
-            color: white;
+            color: $color2;
             display: flex;
             font-family: $sanserif;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
         li a:hover{
-            color:white;
+            color: $color2;
             background-color: $color1;
         }
     }
@@ -244,12 +293,25 @@ footer{
         display: flex;
         flex-direction: column;
         p{
-            color: black;
             font-size: 25px;
-            line-height: 1,5;
+            line-height: 1,7;
+            
         }
     }
-    #galería{
+    .contenedorgrid{
+        margin: 0;
+        #galería{
+            display: flex;
+            flex-direction: column;
+            #img7{
+                display: none;
+            }
+            #img8{
+                display: none;
+            }
+        }
+    }
+    #carouselExampleControls{
         display: none;
     }
     .centro1{
@@ -261,7 +323,45 @@ footer{
     .contenedorfooter{
         display: flex;
         flex-direction: column;
-        color: white;
+        color: $color2;
         align-items: center;
+    }
+}
+@media only screen and (max-width:922px){
+    section{
+        display: flex;
+        flex-direction: column;
+        margin: 30px 50px 30px 50px;  
+        .perfil{
+            padding: 30px;
+        }
+        p{
+            font-size: 20px;
+            line-height: 0,7;
+        }
+    }
+    .contenedorgrid{
+        margin: 10;
+        #galería{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .centro1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .album{
+        width: 85%;
+        animation-name: rotacion;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
     }
 }
