@@ -19,6 +19,9 @@ $sanserif: "lato", sans-serif;
 body{
     background-image: $fondo1;
 }
+.nav-link{
+    color: $danger;
+}
 ul{
     display: flex;
     flex-wrap: wrap;
@@ -38,6 +41,7 @@ ul{
         color:$color1;
     }
 }
+
 .cdmenu{
     height: 40px;
 }
