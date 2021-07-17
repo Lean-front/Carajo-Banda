@@ -58,9 +58,9 @@ main{
         font-family: $sanserif;
         font-size: 40px;
     }
-    section{
+    article{
         display: flex;
-        margin: 30px 50px 30px 50px;  
+        margin: 10px 1% 0px 1%;
         .perfil{
             padding: 30px;
         }
@@ -289,15 +289,6 @@ footer{
             background-color: $color1;
         }
     }
-    section{
-        display: flex;
-        flex-direction: column;
-        p{
-            font-size: 25px;
-            line-height: 1,7;
-            
-        }
-    }
     .contenedorgrid{
         margin: 0;
         #galería{
@@ -328,10 +319,13 @@ footer{
     }
 }
 @media only screen and (max-width:922px){
-    section{
+    article{
         display: flex;
         flex-direction: column;
-        margin: 30px 50px 30px 50px;  
+        align-items: center;
+        img{
+            width: 80%;
+        }
         .perfil{
             padding: 30px;
         }
