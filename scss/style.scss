@@ -58,7 +58,7 @@ main{
         font-family: $sanserif;
         font-size: 40px;
     }
-    article{
+    .integrantes{
         display: flex;
         margin: 10px 1% 0px 1%;
         .perfil{
@@ -91,7 +91,12 @@ main{
         padding-bottom: 30px;
         article{
             @include box;
+            max-width: 100%;
+            height: auto;
             padding: 20px;
+            img{
+                width: 100%;
+            }
             h3{
                 font-size: 30px;
                 color: $color2;
@@ -319,7 +324,7 @@ footer{
     }
 }
 @media only screen and (max-width:922px){
-    article{
+    .integrantes{
         display: flex;
         flex-direction: column;
         align-items: center;

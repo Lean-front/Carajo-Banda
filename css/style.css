@@ -42,12 +42,12 @@ main {
   main h2 {
     font-family: "lato", sans-serif;
     font-size: 40px; }
-  main article {
+  main .integrantes {
     display: flex;
     margin: 10px 1% 0px 1%; }
-    main article .perfil {
+    main .integrantes .perfil {
       padding: 30px; }
-    main article p {
+    main .integrantes p {
       font-size: 20px;
       line-height: 0,7; }
   main .seccion, main .spotify {
@@ -74,7 +74,11 @@ main {
       height: 500px;
       width: 420px;
       border-radius: 20px;
+      max-width: 100%;
+      height: auto;
       padding: 20px; }
+      main .contenedor article img {
+        width: 100%; }
       main .contenedor article h3 {
         font-size: 30px;
         color: white;
@@ -270,15 +274,15 @@ footer {
     align-items: center; } }
 
 @media only screen and (max-width: 922px) {
-  article {
+  .integrantes {
     display: flex;
     flex-direction: column;
     align-items: center; }
-    article img {
+    .integrantes img {
       width: 80%; }
-    article .perfil {
+    .integrantes .perfil {
       padding: 30px; }
-    article p {
+    .integrantes p {
       font-size: 20px;
       line-height: 0,7; }
   .contenedorgrid {
