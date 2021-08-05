@@ -39,18 +39,20 @@ ul {
   display: block;
   margin: auto; }
 
+/*Logo para celulares*/
 .oculto {
   display: none; }
 
 main {
   background-image: url(../img/fondo2.png);
-  border-bottom: red 3px solid; }
+  border-bottom: red 3px solid;
+  /*Info izq / Form derecha*/ }
   main h2 {
     font-family: "lato", sans-serif;
     font-size: 40px; }
   main .integrantes {
     display: flex;
-    margin: 10px 1% 0px 1%; }
+    margin: 10px 1% 30px 1%; }
     main .integrantes .perfil {
       padding: 30px; }
     main .integrantes p {
@@ -132,7 +134,7 @@ main {
       flex-direction: column;
       justify-content: center;
       color: white;
-      max-width: 400px; }
+      height: 320px; }
       main #formularioinfo .forminfo p {
         font-size: 15px;
         padding: 20px;
@@ -167,6 +169,7 @@ main {
   animation-duration: 4s;
   animation-iteration-count: infinite; }
 
+/*Disco animación*/
 @keyframes rotacion {
   from {
     transform: rotate(0deg); }

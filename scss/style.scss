@@ -45,7 +45,6 @@ ul{
         color:$color1;
     }
 }
-
 .cdmenu{
     height: 40px;
 }
@@ -54,6 +53,7 @@ ul{
     display: block;
     margin: auto;
 }
+/*Logo para celulares*/
 .oculto{
     display:none;
 }
@@ -66,7 +66,7 @@ main{
     }
     .integrantes{
         display: flex;
-        margin: 10px 1% 0px 1%;
+        margin: 10px 1% 30px 1%;
         .perfil{
             padding: 30px;
         }
@@ -143,6 +143,7 @@ main{
             }
         }
     }
+    /*Info izq / Form derecha*/
     #formularioinfo{
         display: flex;
         flex-wrap: wrap;
@@ -153,8 +154,8 @@ main{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: $color2;    
-            max-width: 400px;
+            color: $color2;   
+            height: 320px; 
             p{
                 font-size: 15px;
                 padding: 20px;
@@ -191,6 +192,7 @@ main{
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
+/*Disco animación*/
 @keyframes rotacion{
     from{
         transform: rotate(0deg);
